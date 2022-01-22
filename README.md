@@ -4,10 +4,12 @@ SSH config files.
 ## Setup
 ```shell
 cd ssh-conf
-sudo rm /etc/ssh/sshd_config
+sudo rm    /etc/ssh/sshd_config
 sudo ln -s $PWD/ssh/sshd_config /etc/ssh
 sudo rm -r /etc/ssh/sshd_config.d
 sudo ln -s $PWD/ssh/sshd_config.d /etc/ssh
+sudo rm    /etc/ssh/ssh_config
+sudo ln -s $PWD/ssh/ssh_config /etc/ssh
 ```
 
 Generate random port number and add it to `ssh/sshd_config.d/port.conf`.
